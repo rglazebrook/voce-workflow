@@ -40,3 +40,6 @@
 .slide-background.clint.rob:after {
 	right: 135px;
 }
+.reveal .slide-background.present.first {
+	opacity: 0.333;
+}
