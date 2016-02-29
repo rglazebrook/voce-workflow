@@ -14,3 +14,29 @@
 .reveal section h2 {
 	text-shadow: 0 1px 1px white;
 }
+.slide-background.clint:before,
+.slide-background.rob:after {
+	content: '';
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	border: 3px solid white;
+	position: absolute;
+	transition: all 0.25s;
+}
+.slide-background.clint:before {
+	background-image: url(../img/clint.jpg);
+	top: 10px;
+	right: 10px;
+}
+.slide-background.rob:after {
+	background-image: url(../img/rob.jpg);
+	top: 10px;
+	right: 10px;
+}
+.slide-background.clint.rob:after {
+	right: 135px;
+}
