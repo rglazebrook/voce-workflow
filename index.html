@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Voce Workflow</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Voce Workflow</h1>
+				<h2>(Controlling the Chaos)</h2>
+			</section>
+			<section>
+				<h2>With These Guys</h2>
+				<ul>
+					<li><strong>Clint Harvey</strong>, Lead Application Developer</li>
+					<li><strong>Rob Glazebrook</strong>, Senior Front End Developer</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Voce ("vo-chay")</h2>
+				<p>We're part of the Voce Platforms team. We build custom responsive WordPress themes for some pretty big clients.</p>
+				<p><img src="img/TPW_responsive-lockup.jpg" alt="" class="clean"></p>
+			</section>
+			<section>
+				<h2>Version Control: GitHub</h2>
+				<p>Our version control of choice. We mostly use private repositories. Other tools suchs as SVN would work as well (or no version control at all if you're feeling lucky).</p>
+			</section>
+			<section data-background="img/vagrant-bg.png" data-background-repeat="no-repeat">
+				<section>
+					<p>How do you get a consistent dev environment?</p>
+				</section>
+				<section>
+					<h2>Ansible</h2>
+				</section>
+				<section>
+					<h2>Vagrant</h2>
+				</section>
+			</section>
+			<section>
+				<section>				
+					<p>What do you use for automation?</p>
+				</section>
+
+				<section>
+					<p><img src="img/grunt-logo.png" alt="" class="clean"></p>
+					<p>Automates tasks like compiling Sass, autoprefixing CSS, and minifying JS.</p>
+				</section>
+				<section>
+					<h2>When Grunts Aren't Enough</h2>
+					<p><img src="img/peon.jpg" alt="" class="clean"></p>
+					<p>Automates tasks such as cloning projects from GitHub, installing plugins and dependencies, controlling Vagrant, and syncing DBs with staging.</p>
+				</section>
+
+			</section>
+			<section>
+				<section>
+					<p>How do they all work together?</p>
+			  </section>
+				<section>
+					<h2>Initializing a Project on your Machine</h2>
+					<p><img src="" alt="" class="clean"></p>
+					<p>peon-wp-project [projectname]
+						<ul>
+							<li>Kicks off ansible playbook which generally:
+								<ul>
+									<li>Clones the git repo</li>
+									<li>Runs "npm install"</li>
+									<li>Updates VM to create a local dev server and configures DNS [project].staging.voceconnect.dev</li>
+								</ul>
+							</li>
+						</ul>
+					</p>
+			  </section>
+				<section>
+					<h2>Post Setup Tasks</h2>
+					<p><img src="" alt="" class="clean"></p>
+					<p>peon sync-db and/or peon sync-files</p>
+			  </section>
+				<section>
+					<h2>Start Writing Code</h2>
+					<p><img src="" alt="" class="clean"></p>
+					<p>Whether you're front end (glance incredulously at Rob) or backend (pose bodybuilder style) you can now start digging into your theme.</p>
+			  </section>
+			</section>
+			<section>
+				<section>
+					<p><img src="" alt="" class="clean"></p>
+					<p>How do front end and back end work together?</p>
+				</section>
+				<section>
+					<h2>Front End First:</h2>
+						<ul>
+							<li>html and css structured with dummy content matching typical use</li>
+							<li>"widget" is handed off to back end with explaination of how it should work and back end then hooks it up to the CMS</li>
+							<li>complete feature is handed back to front end to add final polish</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Back End First:</h2>
+						<ul>
+							<li>back end creates a CMS powered "widget" matching the mockup/design layout (at least structurally) as closely as possible</li>
+							<li>"widget" is handed to front end for beautification</li>
+						</ul>
+					</section>
+			</section>
+			<section>
+				<p><img src="" alt="" class="clean"></p>
+				<p>Branching</p>
+				<p>Feature based branches</p>
+				<p>Allows people to work on different priorities without stepping on each other toes</p>
+				<p>Provides a simple way to silo code in case someone breaks something</p>
+			</section>
+			<section>
+				<p><img src="" alt="" class="clean"></p>
+				<p>I committed code to my branch, now what?</p>
+				<p>Pull requests, pushing to stage/uat, deployments, etc</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+</html>

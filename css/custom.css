@@ -1,0 +1,8 @@
+.reveal section img.clean {
+	box-shadow: none;
+	border: 0px none;
+}
+.reveal section p,
+.reveal section h2 {
+	text-shadow: 0 1px 1px white;
+}
